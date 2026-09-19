@@ -2,6 +2,7 @@
 
 import { ArrowRight, Landmark, ShieldCheck, Languages, TrendingUp, MapPin } from "lucide-react"
 import { ActionLink } from "@/components/ui/action"
+import { BusinessIdeaCta } from "@/components/landing/business-idea-cta"
 import { ScoreRing } from "@/components/ui/charts"
 import { ProgressBar } from "@/components/ui/progress-bar"
 import { Badge } from "@/components/ui/badge"
@@ -22,11 +23,12 @@ export function Hero() {
           </h1>
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted-foreground">{t("landing.intro")}</p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <ActionLink href="/assessment" size="lg">
               {t("common.analyze")}
               <ArrowRight />
             </ActionLink>
+            <BusinessIdeaCta />
             <ActionLink href="/schemes" size="lg" variant="outline">
               <Landmark />
               {t("common.exploreSchemes")}

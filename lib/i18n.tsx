@@ -14,6 +14,7 @@ export const dictionary: Dict = {
     hi: "उधार लेने से पहले, अपना व्यवसाय जानें।",
   },
   "common.analyze": { en: "Analyze My Business", hi: "मेरे व्यवसाय का विश्लेषण करें" },
+  "common.describeIdea": { en: "Describe your Business Idea", hi: "अपना व्यवसाय विचार बताएँ" },
   "common.exploreSchemes": { en: "Explore Schemes", hi: "योजनाएँ देखें" },
   "common.continue": { en: "Continue", hi: "आगे बढ़ें" },
   "common.back": { en: "Back", hi: "पीछे" },
@@ -63,6 +64,10 @@ export const dictionary: Dict = {
     hi: "प्रत्येक स्कोर और सुझाव डेटा स्रोतों और स्पष्ट मान्यताओं से जुड़ा है — कोई गुप्त सलाह नहीं।",
   },
   "landing.multilingual": { en: "Available in English & हिन्दी", hi: "English और हिन्दी में उपलब्ध" },
+  "landing.ideaPlaceholder": {
+    en: "Describe your business idea...",
+    hi: "अपना व्यवसाय विचार लिखें...",
+  },
 }
 
 type I18nContextValue = {

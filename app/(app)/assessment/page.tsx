@@ -1,7 +1,7 @@
 "use client"
 
 import { useRouter } from "next/navigation"
-import { useMemo, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { ArrowLeft, ArrowRight, LogOut, MapPin, Wallet, Lightbulb, Info } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Field, Input, Select, Textarea } from "@/components/ui/form"
@@ -10,6 +10,7 @@ import { Stepper } from "@/components/assessment/stepper"
 import { VoiceButton } from "@/components/shared/voice-button"
 import { MapPreview } from "@/components/shared/map-preview"
 import { useI18n } from "@/lib/i18n"
+import { BUSINESS_IDEA_STORAGE_KEY } from "@/components/landing/business-idea-cta"
 import {
   states,
   districtsByState,
@@ -60,6 +61,14 @@ export default function AssessmentPage() {
   const router = useRouter()
   const [step, setStep] = useState(0)
   const [form, setForm] = useState<FormState>(initial)
+
+  useEffect(() => {
+    if (typeof window === "undefined") return
+    const saved = sessionStorage.getItem(BUSINESS_IDEA_STORAGE_KEY)
+    if (!saved) return
+    setForm((f) => (f.description ? f : { ...f, description: saved }))
+    sessionStorage.removeItem(BUSINESS_IDEA_STORAGE_KEY)
+  }, [])
 
   const steps = ["Location", "Financial Capacity", "Business Idea", "Additional Info"]
   const set = <K extends keyof FormState>(key: K, value: FormState[K]) => setForm((f) => ({ ...f, [key]: value }))
