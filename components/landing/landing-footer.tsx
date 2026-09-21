@@ -1,4 +1,4 @@
-import { BrandLogo } from "@/components/brand/logo"
+import { BrandLogo } from "@/components/brand/logo";
 
 export function LandingFooter() {
   return (
@@ -8,8 +8,9 @@ export function LandingFooter() {
           <div className="max-w-sm">
             <BrandLogo size="md" />
             <p className="mt-3 text-sm text-muted-foreground">
-              An AI-powered business advisory platform helping rural micro-entrepreneurs make confident, evidence-backed
-              decisions before borrowing.
+              An AI-powered business advisory platform helping rural
+              micro-entrepreneurs make confident, evidence-backed decisions
+              before borrowing.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-8 text-sm sm:grid-cols-3">
@@ -40,9 +41,10 @@ export function LandingFooter() {
           </div>
         </div>
         <div className="mt-8 border-t border-border pt-6 text-center text-xs text-muted-foreground">
-          Smart India Hackathon 2026 · UdyamSetu AI. A demonstration prototype with illustrative data.
+          Smart India Hackathon 2026 · Project REACH. A demonstration prototype
+          with illustrative data.
         </div>
       </div>
     </footer>
-  )
+  );
 }
