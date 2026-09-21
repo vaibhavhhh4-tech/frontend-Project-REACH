@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Project REACH — Before You Borrow, Know Your Business",
   description:
     "AI-powered hyper-local business advisory and financial structuring platform for rural micro-entrepreneurs in India. Check business viability before taking a loan.",
-  // generator: "v0.app",
+  generator: "v0.app",
 };
 
 export const viewport: Viewport = {
